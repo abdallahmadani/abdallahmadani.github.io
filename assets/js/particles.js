@@ -16,7 +16,7 @@
 
   const rand = (a, b) => a + Math.random() * (b - a);
 
-  const dots = Array.from({ length: 90 }, () => ({
+  const dots = Array.from({ length: 96 }, () => ({
     x: rand(0, 1),
     y: rand(0, 1),
     r: rand(0.8, 2.2),
@@ -28,10 +28,6 @@
   const draw = () => {
     ctx.clearRect(0, 0, w, h);
 
-    const styles = getComputedStyle(document.documentElement);
-    const accent = styles.getPropertyValue("--accent").trim() || "#22d3ee";
-    const muted = styles.getPropertyValue("--muted").trim() || "rgba(255,255,255,.55)";
-
     for (const d of dots) {
       d.x += d.vx; d.y += d.vy;
       if (d.x < -0.05) d.x = 1.05;
@@ -40,15 +36,14 @@
       if (d.y > 1.05) d.y = -0.05;
     }
 
-    // faint connections
     for (let i = 0; i < dots.length; i++) {
       for (let j = i + 1; j < dots.length; j++) {
         const a = dots[i], b = dots[j];
         const dx = (a.x - b.x) * w;
         const dy = (a.y - b.y) * h;
         const dist = Math.hypot(dx, dy);
-        if (dist < 140) {
-          const t = 1 - dist / 140;
+        if (dist < 150) {
+          const t = 1 - dist / 150;
           ctx.strokeStyle = `rgba(34,211,238,${0.08 * t})`;
           ctx.lineWidth = 1;
           ctx.beginPath();
@@ -66,7 +61,6 @@
       ctx.arc(x, y, d.r, 0, Math.PI * 2);
       ctx.fill();
 
-      // occasional accent spark
       if (Math.random() < 0.02) {
         ctx.fillStyle = `rgba(34,211,238,0.45)`;
         ctx.beginPath();
