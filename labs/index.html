@@ -1,1 +1,66 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lab & Writing • Abdallah Madani</title>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+  <div class="bg"></div><canvas id="particles"></canvas><div class="flags"></div>
 
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/"><span class="brand-dot"></span><span>Abdallah Madani</span></a>
+      <nav class="nav-links">
+        <a href="/">Home</a><a href="/about/">About</a><a href="/education/">Education</a><a href="/experience/">Experience</a>
+        <a href="/awards/">Awards</a><a href="/certifications/">Certifications</a><a href="/interests/">Interests</a>
+        <a href="/labs/">Lab & Writing</a><a href="/contact/">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon" id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A8.4 8.4 0 1 1 11.2 3a6.8 6.8 0 0 0 9.8 9.8Z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-title">
+      <h2>Lab & Writing</h2>
+      <p>
+        This is where I’ll post lab reports, write-ups, and anything that shows how I think and communicate scientifically.
+        I’m keeping it organized and easy to read — not a random file dump.
+      </p>
+    </div>
+
+    <div class="grid section">
+      <div class="card" style="grid-column: span 7;">
+        <h3>What I’ll upload here</h3>
+        <ul class="bullets">
+          <li>University lab reports (chem/bio/psych) when they’re ready to share</li>
+          <li>High school labs that still hold up (formatted, clear, and polished)</li>
+          <li>Short research summaries on global health / medical geography topics</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column: span 5;">
+        <h3>Placeholder (for now)</h3>
+        <p>
+          Once you upload a PDF into a folder like <span class="pill">/labs/files/</span>, you can link it here.
+          If you want, I can also build a nice “filter + tags” system so this page feels like a real portfolio.
+        </p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>© <span id="yr"></span> Abdallah Madani</div>
+        <div class="small-links"><a href="/contact/">Contact</a></div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="/assets/js/main.js"></script>
+  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>
