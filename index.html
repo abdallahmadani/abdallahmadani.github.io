@@ -1,1 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abdallah Madani</title>
+  <meta name="description" content="Abdallah Madani — Syrian-Canadian Honours Life Sciences student at McMaster. Medicine, global health, world geography." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230ea5e9'/%3E%3Cpath d='M18 34h28' stroke='white' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M32 20v28' stroke='white' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="bg">
+    <canvas id="particles"></canvas>
+    <div class="flag-band" aria-hidden="true"></div>
+    <div class="glow-orb a" aria-hidden="true"></div>
+    <div class="glow-orb b" aria-hidden="true"></div>
+  </div>
 
+  <header class="topbar">
+    <a class="brand" href="/">
+      <span class="brand-dot"></span>
+      <span>Abdallah Madani</span>
+    </a>
+
+    <nav class="nav">
+      <a href="/about/">About</a>
+      <a href="/education/">Education</a>
+      <a href="/experience/">Experience</a>
+      <a href="/interests/">Interests</a>
+      <a href="https://www.linkedin.com/in/abdallahmadani/" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a class="pill" href="/contact/">Contact</a>
+
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme">
+        <span class="icon" id="themeIcon" aria-hidden="true"></span>
+      </button>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu">☰</button>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/about/">About</a>
+    <a href="/education/">Education</a>
+    <a href="/experience/">Experience</a>
+    <a href="/interests/">Interests</a>
+    <a href="https://www.linkedin.com/in/abdallahmadani/" target="_blank" rel="noreferrer">LinkedIn</a>
+    <a class="pill" href="/contact/">Contact</a>
+  </div>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-left">
+        <div class="kicker">
+          <span class="k-dot"></span>
+          Honours Life Sciences (B.Sc.) • McMaster University
+        </div>
+
+        <h1>
+          Medicine, global health,
+          <span class="accent">and the geography of health</span>.
+        </h1>
+
+        <p class="lead">
+          I’m a Syrian-Canadian student building toward medicine. I’m genuinely obsessed with how health changes by place —
+          access to care, systems, environment, and the real human stories behind the numbers.
+        </p>
+
+        <div class="chips">
+          <span class="chip">Medicine</span>
+          <span class="chip">Global Health</span>
+          <span class="chip">Medical Geography</span>
+          <span class="chip">Health Systems</span>
+          <span class="chip">Ethics & Tech</span>
+        </div>
+
+        <div class="cta">
+          <a class="btn primary" href="/experience/">See experience</a>
+          <a class="btn" href="/interests/">Geography side</a>
+        </div>
+
+        <div class="mini">
+          <div class="mini-card">
+            <div class="mini-title">Geotastic</div>
+            <div class="mini-text">Top 3 in a pinpoint challenge vs elite players (best moment of my life honestly).</div>
+          </div>
+          <div class="mini-card">
+            <div class="mini-title">Travel</div>
+            <div class="mini-text">Syria, Jordan, Lebanon, UAE, KSA, Germany, Italy, France, Switzerland, Austria, Canada, USA.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="portrait-card">
+          <div class="portrait-top">
+            <div class="badge">
+              <span class="badge-ico" aria-hidden="true">✦</span>
+              <span>Syrian-Canadian</span>
+            </div>
+            <div class="badge soft">
+              <span class="badge-ico" aria-hidden="true">⌁</span>
+              <span>World geography nerd</span>
+            </div>
+          </div>
+
+          <div class="portrait">
+            <img class="pfp" src="assets/img/headshot.jpg" alt="Abdallah Madani headshot" />
+            <div class="portrait-glow" aria-hidden="true"></div>
+          </div>
+
+          <div class="portrait-bottom">
+            <div class="stat">
+              <div class="stat-num">Flags</div>
+              <div class="stat-lbl">Memorizing them is my thing</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">Creative</div>
+              <div class="stat-lbl">Photography • Photoshop • Video editing</div>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <a class="btn tiny" href="tel:+13657792040">Call</a>
+            <a class="btn tiny" href="/contact/">Message</a>
+            <a class="btn tiny" href="https://www.linkedin.com/in/abdallahmadani/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <a class="glass-card" href="/about/">
+        <div class="card-ico" aria-hidden="true">🌍</div>
+        <div class="card-title">About</div>
+        <div class="card-text">Who I am, what I’m aiming for, and what I care about.</div>
+        <div class="card-arrow" aria-hidden="true">→</div>
+      </a>
+
+      <a class="glass-card" href="/education/">
+        <div class="card-ico" aria-hidden="true">🎓</div>
+        <div class="card-title">Education</div>
+        <div class="card-text">My academic track and what I’m building skills in.</div>
+        <div class="card-arrow" aria-hidden="true">→</div>
+      </a>
+
+      <a class="glass-card" href="/experience/">
+        <div class="card-ico" aria-hidden="true">🩺</div>
+        <div class="card-title">Experience</div>
+        <div class="card-text">Patient-facing work + real responsibilities.</div>
+        <div class="card-arrow" aria-hidden="true">→</div>
+      </a>
+
+      <a class="glass-card" href="/interests/">
+        <div class="card-ico" aria-hidden="true">🧭</div>
+        <div class="card-title">Interests</div>
+        <div class="card-text">Geography, flags, travel, and creative work.</div>
+        <div class="card-arrow" aria-hidden="true">→</div>
+      </a>
+    </section>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> Abdallah Madani</div>
+      <div class="footer-links">
+        <a href="tel:+13657792040">+1 (365) 779-2040</a>
+        <span class="sep">•</span>
+        <a href="/contact/">Contact</a>
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/particles.js"></script>
+</body>
+</html>
