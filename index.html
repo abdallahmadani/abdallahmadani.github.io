@@ -1,1 +1,110 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abdallah Madani</title>
+  <meta name="description" content="Syrian-Canadian Life Sciences student exploring medicine, global health, and medical geography." />
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <div class="bg-dust"></div>
 
+  <div class="container">
+    <nav class="nav">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>Abdallah Madani</span>
+      </div>
+
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/education/">Education</a>
+        <a href="/experience/">Experience</a>
+        <a href="/awards/">Awards</a>
+        <a href="/certifications/">Certifications</a>
+        <a href="/interests/">Interests</a>
+        <a href="/labs/">Lab Work</a>
+      </div>
+
+      <div class="controls">
+        <button class="iconbtn" data-theme-toggle title="Toggle theme">☾</button>
+        <a class="iconbtn" href="https://www.linkedin.com/in/abdallahmadani/" target="_blank" rel="noreferrer" title="LinkedIn">in</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="heroInner">
+        <div>
+          <h1 class="hTitle">Medicine, mapped.</h1>
+          <p class="hSub">
+            I’m a Syrian-Canadian Life Sciences student at McMaster University. I’m working toward medicine with a global perspective — I’m especially interested in how health outcomes change by place: access to care, environment, systems, and the human stories behind the data.
+          </p>
+
+          <div class="pills">
+            <span class="pill">Life Sciences (Gateway)</span>
+            <span class="pill">Global Health</span>
+            <span class="pill">Medical Geography</span>
+            <span class="pill">Physiology (goal)</span>
+            <span class="pill">Photography + Editing</span>
+          </div>
+
+          <div class="btnRow">
+            <a class="btn primary" href="/assets/resume.pdf" target="_blank" rel="noreferrer">View Resume</a>
+            <a class="btn" href="/contact/" onclick="location.href='/about/'; return false;">Quick intro</a>
+            <a class="btn" href="/interests/">Interactive Globe</a>
+          </div>
+        </div>
+
+        <div class="heroCard">
+          <img class="avatar" src="/assets/img/profile.jpg" alt="Abdallah Madani">
+          <div>
+            <div style="font-weight:650; margin-bottom:4px;">Abdallah Madani</div>
+            <div style="color:var(--muted); font-size:14px; line-height:1.55;">
+              McMaster University · Hamilton, Ontario<br>
+              <a href="mailto:abdallah-madani@hotmail.com" style="color:inherit">abdallah-madani@hotmail.com</a> ·
+              <a href="tel:+13657792040" style="color:inherit">+1 (365) 779-2040</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Quick overview</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="kicker">Now</div>
+          <h3>Life Sciences @ McMaster</h3>
+          <p>Building a strong base in biology, chemistry, and quantitative thinking while staying close to real patient-facing work.</p>
+          <ul class="list">
+            <li>Goal: Physiology research specialization</li>
+            <li>Interest: interdisciplinary globalization studies minor (tentative)</li>
+            <li>Focus: clean writing, clear thinking, and useful impact</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="kicker">Signature interest</div>
+          <h3>Health is biological and geographical</h3>
+          <p>I like connecting the “human body” view with the “world map” view — patterns, systems, and why outcomes differ across countries and communities.</p>
+          <ul class="list">
+            <li>Access to care + health systems</li>
+            <li>Environment + resources</li>
+            <li>Culture + policy effects on decisions</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="yr"></span> Abdallah Madani</span>
+      <span>Built on GitHub Pages · <a href="/interests/" style="color:inherit;">Interactive Globe</a></span>
+    </footer>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>
