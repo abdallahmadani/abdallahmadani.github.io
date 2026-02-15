@@ -1,4 +1,3 @@
-// theme
 (() => {
   const root = document.documentElement;
   const btn = document.getElementById("themeToggle");
@@ -21,7 +20,6 @@
   });
 })();
 
-// mobile menu
 (() => {
   const btn = document.getElementById("menuBtn");
   const menu = document.getElementById("mobileMenu");
@@ -35,8 +33,23 @@
   });
 })();
 
-// footer year
 (() => {
   const y = document.getElementById("year");
   if (y) y.textContent = String(new Date().getFullYear());
+})();
+
+(() => {
+  const items = document.querySelectorAll("[data-accordion]");
+  items.forEach((wrap) => {
+    const buttons = wrap.querySelectorAll("[data-acc-btn]");
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const item = btn.closest(".item");
+        if (!item) return;
+        const isOpen = item.classList.contains("open");
+        wrap.querySelectorAll(".item.open").forEach(x => x.classList.remove("open"));
+        if (!isOpen) item.classList.add("open");
+      });
+    });
+  });
 })();
