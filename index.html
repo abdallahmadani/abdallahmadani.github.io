@@ -5,19 +5,21 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Abdallah Madani</title>
   <meta name="description" content="Syrian-Canadian Life Sciences student exploring medicine, global health, and medical geography." />
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/main.css" />
 </head>
 <body>
-  <div class="bg-dust"></div>
+  <div class="bg"></div>
+  <canvas id="particles"></canvas>
+  <div class="flags"></div>
 
-  <div class="container">
-    <nav class="nav">
-      <div class="brand">
-        <span class="dot"></span>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/">
+        <span class="brand-dot"></span>
         <span>Abdallah Madani</span>
-      </div>
+      </a>
 
-      <div class="navlinks">
+      <nav class="nav-links">
         <a href="/">Home</a>
         <a href="/about/">About</a>
         <a href="/education/">Education</a>
@@ -25,86 +27,116 @@
         <a href="/awards/">Awards</a>
         <a href="/certifications/">Certifications</a>
         <a href="/interests/">Interests</a>
-        <a href="/labs/">Lab Work</a>
-      </div>
+        <a href="/labs/">Lab & Writing</a>
+        <a href="/contact/">Contact</a>
+      </nav>
 
-      <div class="controls">
-        <button class="iconbtn" data-theme-toggle title="Toggle theme">☾</button>
-        <a class="iconbtn" href="https://www.linkedin.com/in/abdallahmadani/" target="_blank" rel="noreferrer" title="LinkedIn">in</a>
+      <div class="nav-right">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon" id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.8A8.4 8.4 0 1 1 11.2 3a6.8 6.8 0 0 0 9.8 9.8Z"/>
+          </svg>
+        </button>
+        <a class="icon-btn" href="https://www.linkedin.com/in/abdallahmadani/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM.4 8.2H4.6V24H.4V8.2ZM8.2 8.2H12.2V10.4H12.26C12.82 9.34 14.18 8.22 16.22 8.22 20.48 8.22 21.28 11.02 21.28 14.66V24H17.08V15.34C17.08 13.28 17.04 10.62 14.2 10.62 11.32 10.62 10.88 12.86 10.88 15.18V24H6.68V8.2H8.2Z"/></svg>
+        </a>
       </div>
-    </nav>
+    </div>
+  </header>
 
+  <main>
     <section class="hero">
-      <div class="heroInner">
-        <div>
-          <h1 class="hTitle">Medicine, mapped.</h1>
-          <p class="hSub">
-            I’m a Syrian-Canadian Life Sciences student at McMaster University. I’m working toward medicine with a global perspective — I’m especially interested in how health outcomes change by place: access to care, environment, systems, and the human stories behind the data.
-          </p>
+      <div class="container">
+        <div class="hero-card">
+          <div class="hero-inner">
+            <div>
+              <div class="kicker">
+                <span class="pill">Syrian-Canadian • Life Sciences (B.Sc.)</span>
+                <span class="pill">Medicine • Global Health • Medical Geography</span>
+              </div>
 
-          <div class="pills">
-            <span class="pill">Life Sciences (Gateway)</span>
-            <span class="pill">Global Health</span>
-            <span class="pill">Medical Geography</span>
-            <span class="pill">Physiology (goal)</span>
-            <span class="pill">Photography + Editing</span>
-          </div>
+              <h1>Building toward medicine with a global perspective.</h1>
 
-          <div class="btnRow">
-            <a class="btn primary" href="/assets/resume.pdf" target="_blank" rel="noreferrer">View Resume</a>
-            <a class="btn" href="/contact/" onclick="location.href='/about/'; return false;">Quick intro</a>
-            <a class="btn" href="/interests/">Interactive Globe</a>
-          </div>
-        </div>
+              <p class="lead">
+                I’m a Life Sciences student at McMaster University, interested in how health outcomes change by place —
+                access to care, environment, systems, and the human side behind the data.
+              </p>
 
-        <div class="heroCard">
-          <img class="avatar" src="/assets/img/profile.jpg" alt="Abdallah Madani">
-          <div>
-            <div style="font-weight:650; margin-bottom:4px;">Abdallah Madani</div>
-            <div style="color:var(--muted); font-size:14px; line-height:1.55;">
-              McMaster University · Hamilton, Ontario<br>
-              <a href="mailto:abdallah-madani@hotmail.com" style="color:inherit">abdallah-madani@hotmail.com</a> ·
-              <a href="tel:+13657792040" style="color:inherit">+1 (365) 779-2040</a>
+              <div class="cta-row">
+                <a class="btn primary" href="/contact/">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9 22 2"/></svg>
+                  Contact
+                </a>
+                <a class="btn" href="/assets/img/resume.pdf" target="_blank" rel="noreferrer">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+                  Resume
+                </a>
+                <a class="btn" href="/interests/">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21a9 9 0 1 0-9-9"/><path d="M3.6 9h16.8"/><path d="M12 3c2.5 2.7 4 6 4 9s-1.5 6.3-4 9c-2.5-2.7-4-6-4-9s1.5-6.3 4-9Z"/></svg>
+                  Interactive Globe
+                </a>
+              </div>
+            </div>
+
+            <div class="profile">
+              <div class="profile-wrap">
+                <img class="profile-img" src="/assets/img/profile.jpg" alt="Abdallah Madani headshot" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="section">
-      <h2>Quick overview</h2>
-      <div class="grid">
-        <div class="card">
-          <div class="kicker">Now</div>
-          <h3>Life Sciences @ McMaster</h3>
-          <p>Building a strong base in biology, chemistry, and quantitative thinking while staying close to real patient-facing work.</p>
-          <ul class="list">
-            <li>Goal: Physiology research specialization</li>
-            <li>Interest: interdisciplinary globalization studies minor (tentative)</li>
-            <li>Focus: clean writing, clear thinking, and useful impact</li>
-          </ul>
+        <div class="section">
+          <div class="grid">
+            <div class="card">
+              <h3>What I’m focused on right now</h3>
+              <p>
+                Life Sciences Gateway at McMaster — aiming for the Physiology Research Specialization,
+                with interest in an Interdisciplinary Minor in Globalization Studies.
+              </p>
+            </div>
+            <div class="card">
+              <h3>What makes me “me”</h3>
+              <p>
+                I’m genuinely obsessed with world geography — flags, capitals, borders, travel,
+                and the story behind every place. I like mixing that with medicine and global health.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Clinical + people-facing experience</h3>
+              <p>
+                On-call Clinical Assistant at Shepherd Medical Clinic, plus years in fast-paced customer service roles.
+                I enjoy systems that run smoothly and teams that communicate clearly.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Creative tools I actually use</h3>
+              <p>
+                Photography, Photoshop, and video editing — learned in school and built on independently.
+                I like making information look clean and easy to understand.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div class="card">
-          <div class="kicker">Signature interest</div>
-          <h3>Health is biological and geographical</h3>
-          <p>I like connecting the “human body” view with the “world map” view — patterns, systems, and why outcomes differ across countries and communities.</p>
-          <ul class="list">
-            <li>Access to care + health systems</li>
-            <li>Environment + resources</li>
-            <li>Culture + policy effects on decisions</li>
-          </ul>
-        </div>
+        <footer class="footer">
+          <div class="footer-inner">
+            <div>© <span id="yr"></span> Abdallah Madani</div>
+            <div class="small-links">
+              <a href="mailto:abdallah-madani@hotmail.com">abdallah-madani@hotmail.com</a>
+              <a href="tel:+13657792040">+1 (365) 779-2040</a>
+              <a href="https://www.linkedin.com/in/abdallahmadani/" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+          </div>
+        </footer>
+
       </div>
     </section>
-
-    <footer>
-      <span>© <span id="yr"></span> Abdallah Madani</span>
-      <span>Built on GitHub Pages · <a href="/interests/" style="color:inherit;">Interactive Globe</a></span>
-    </footer>
-  </div>
+  </main>
 
   <script src="/assets/js/main.js"></script>
-  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById("yr").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
