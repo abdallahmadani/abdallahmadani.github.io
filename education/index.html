@@ -1,1 +1,73 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Education • Abdallah Madani</title>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+  <div class="bg"></div><canvas id="particles"></canvas><div class="flags"></div>
 
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/"><span class="brand-dot"></span><span>Abdallah Madani</span></a>
+      <nav class="nav-links">
+        <a href="/">Home</a><a href="/about/">About</a><a href="/education/">Education</a><a href="/experience/">Experience</a>
+        <a href="/awards/">Awards</a><a href="/certifications/">Certifications</a><a href="/interests/">Interests</a>
+        <a href="/labs/">Lab & Writing</a><a href="/contact/">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon" id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A8.4 8.4 0 1 1 11.2 3a6.8 6.8 0 0 0 9.8 9.8Z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-title">
+      <h2>Education</h2>
+      <p>
+        Life Sciences Gateway right now, aiming to move into the Physiology Research Specialization.
+        I’m also interested in an Interdisciplinary Minor in Globalization Studies (still flexible depending on where my interests land).
+      </p>
+    </div>
+
+    <div class="timeline">
+      <div class="item">
+        <div class="item-top">
+          <div>
+            <h3>McMaster University — B.Sc. Life Sciences</h3>
+            <div class="meta">Hamilton, Ontario • Life Sciences Gateway Program</div>
+          </div>
+          <div class="pill">Current</div>
+        </div>
+        <div class="badges">
+          <span class="badge">Goal: Physiology Research Specialization</span>
+          <span class="badge">Interest: Globalization Studies minor</span>
+          <span class="badge">Theme: Medicine + global health</span>
+        </div>
+        <ul class="bullets">
+          <li>Relevant coursework: Cell & Molecular Biology; Chemistry; Calculus; Physics; Psychology & Neuroscience.</li>
+          <li>Building lab/report writing skills and stronger scientific communication.</li>
+          <li>Long-term: connect health + place (medical geography / health systems).</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>© <span id="yr"></span> Abdallah Madani</div>
+        <div class="small-links">
+          <a href="/assets/img/resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="/assets/js/main.js"></script>
+  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>
