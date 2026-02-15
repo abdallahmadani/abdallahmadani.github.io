@@ -1,1 +1,150 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Experience • Abdallah Madani</title>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+  <div class="bg"></div><canvas id="particles"></canvas><div class="flags"></div>
 
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/"><span class="brand-dot"></span><span>Abdallah Madani</span></a>
+      <nav class="nav-links">
+        <a href="/">Home</a><a href="/about/">About</a><a href="/education/">Education</a><a href="/experience/">Experience</a>
+        <a href="/awards/">Awards</a><a href="/certifications/">Certifications</a><a href="/interests/">Interests</a>
+        <a href="/labs/">Lab & Writing</a><a href="/contact/">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon" id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A8.4 8.4 0 1 1 11.2 3a6.8 6.8 0 0 0 9.8 9.8Z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-title">
+      <h2>Experience</h2>
+      <p>
+        I’ve worked in clinical settings, high-volume customer service, and roles where I had to manage systems and people at the same time.
+        I like work that’s fast, organized, and actually impacts someone’s day.
+      </p>
+    </div>
+
+    <div class="timeline">
+
+      <div class="item">
+        <div class="item-top">
+          <div>
+            <h3>Clinical Assistant (On-Call) — Shepherd Medical Clinic</h3>
+            <div class="meta">Oakville, Ontario • Feb 2024 — Present</div>
+          </div>
+          <div class="pill">Healthcare</div>
+        </div>
+        <ul class="bullets">
+          <li>Streamlined patient registration, contributing to a noticeable reduction in wait time.</li>
+          <li>Assisted with preparing/administering vaccinations (30+ per month).</li>
+          <li>Supported physicians and clinic operations to keep care efficient and organized.</li>
+        </ul>
+        <div class="badges">
+          <span class="badge">Patient-centred</span>
+          <span class="badge">EMR exposure (OSCAR Pro)</span>
+          <span class="badge">Fast workflow</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-top">
+          <div>
+            <h3>Bakery Associate (Part-Time) — Fortinos Supermarket Ltd.</h3>
+            <div class="meta">Oakville, Ontario • Apr 2023 — Present</div>
+          </div>
+          <div class="pill">Operations</div>
+        </div>
+        <ul class="bullets">
+          <li>Maintained department operations and closures with strong standards and compliance.</li>
+          <li>Improved packaging efficiency and reduced waste through smart discounting.</li>
+          <li>Customer service in a high-traffic environment.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-top">
+          <div>
+            <h3>Chromebook Manager & Event Organizer — A.B. Academy</h3>
+            <div class="meta">Oakville, Ontario • Sep 2021 — Present</div>
+          </div>
+          <div class="pill">Systems</div>
+        </div>
+        <ul class="bullets">
+          <li>Managed 350+ student devices (formatting, cleaning, deployment readiness).</li>
+          <li>Troubleshot issues for students/teachers to keep classes running.</li>
+          <li>Helped organize school events and handled on-site support.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-top">
+          <div>
+            <h3>Engagement & Promotion Stakeholder — Halton Environmental Network</h3>
+            <div class="meta">Halton, Ontario • Feb 2023 — Jun 2025</div>
+          </div>
+          <div class="pill">Public impact</div>
+        </div>
+        <ul class="bullets">
+          <li>Produced videos/posters that increased event attendance.</li>
+          <li>Coordinated Generation Green conferences and welcomed government officials.</li>
+          <li>Advocated for sustainability through outreach and community engagement.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-top">
+          <div>
+            <h3>Yearbook Production Manager — Pegasus School Images</h3>
+            <div class="meta">Oakville, Ontario • Feb 2025 — Jun 2025</div>
+          </div>
+          <div class="pill">Leadership</div>
+        </div>
+        <ul class="bullets">
+          <li>Led yearbook production from planning to distribution.</li>
+          <li>Organized delivery to 480+ students with smooth logistics.</li>
+          <li>Ran promotions that resulted in record-high sales (sold out).</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-top">
+          <div>
+            <h3>Sales Representative — Mastercom (TELUS & Koodo)</h3>
+            <div class="meta">Mississauga, Ontario • Jun 2022 — Aug 2023</div>
+          </div>
+          <div class="pill">Communication</div>
+        </div>
+        <ul class="bullets">
+          <li>Delivered a customer-first approach and strong product explanations.</li>
+          <li>Built online reputation with 20+ positive reviews.</li>
+          <li>Consistent sales performance in a competitive environment.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>© <span id="yr"></span> Abdallah Madani</div>
+        <div class="small-links">
+          <a href="/assets/img/resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="/assets/js/main.js"></script>
+  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>
