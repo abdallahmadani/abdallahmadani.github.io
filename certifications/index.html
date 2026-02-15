@@ -1,1 +1,54 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Certifications • Abdallah Madani</title>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+  <div class="bg"></div><canvas id="particles"></canvas><div class="flags"></div>
 
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/"><span class="brand-dot"></span><span>Abdallah Madani</span></a>
+      <nav class="nav-links">
+        <a href="/">Home</a><a href="/about/">About</a><a href="/education/">Education</a><a href="/experience/">Experience</a>
+        <a href="/awards/">Awards</a><a href="/certifications/">Certifications</a><a href="/interests/">Interests</a>
+        <a href="/labs/">Lab & Writing</a><a href="/contact/">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon" id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A8.4 8.4 0 1 1 11.2 3a6.8 6.8 0 0 0 9.8 9.8Z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-title">
+      <h2>Certifications</h2>
+      <p>Credentials that support clinical work, safety, and bilingual communication.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="item"><div class="item-top"><div><h3>First Aid & CPR Training</h3><div class="meta">2025</div></div><div class="pill">Safety</div></div></div>
+      <div class="item"><div class="item-top"><div><h3>DELF B2 — Diplôme d'Études en Langue Française</h3><div class="meta">2025</div></div><div class="pill">French</div></div></div>
+      <div class="item"><div class="item-top"><div><h3>Certificate of Bilingual Studies — French Immersion (Ontario)</h3><div class="meta">2025</div></div><div class="pill">Diploma</div></div></div>
+      <div class="item"><div class="item-top"><div><h3>WHMIS • WHSA • AODA & Human Rights Code</h3><div class="meta">2024</div></div><div class="pill">Workplace</div></div></div>
+      <div class="item"><div class="item-top"><div><h3>Ontario Food Handler Certification</h3><div class="meta">2023</div></div><div class="pill">Compliance</div></div></div>
+      <div class="item"><div class="item-top"><div><h3>HIGH FIVE Trainer Manager</h3><div class="meta">2022</div></div><div class="pill">Training</div></div></div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>© <span id="yr"></span> Abdallah Madani</div>
+        <div class="small-links"><a href="/contact/">Contact</a></div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="/assets/js/main.js"></script>
+  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>
