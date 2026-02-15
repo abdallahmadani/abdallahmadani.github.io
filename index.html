@@ -98,5 +98,431 @@
       border: 1px solid rgba(255,255,255,.2);
       border-radius: var(--radius);
       padding: 18px;
-      box-shadow: 0 18px 60px rgba(0,0,0,
+      box-shadow: 0 18px 60px rgba(0,0,0,.22);
+      backdrop-filter: blur(10px);
+    }
+    .mini-title{
+      font-size:.9rem;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color: rgba(255,255,255,.75);
+      margin:0 0 10px;
+    }
+    .mini-list{
+      margin:0;
+      padding-left: 18px;
+      color: rgba(255,255,255,.9);
+    }
+    .mini-list li{margin: 8px 0}
 
+    /* ====== Sticky nav ====== */
+    .nav{
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(246,247,248,.82);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner{
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 10px 14px;
+      display:flex;
+      gap: 10px;
+      align-items:center;
+      justify-content: space-between;
+    }
+    .nav a{
+      text-decoration:none;
+      color: var(--navy);
+      font-weight: 600;
+      font-size: .95rem;
+      padding: 8px 10px;
+      border-radius: 10px;
+    }
+    .nav a:hover{background:#e9eef3}
+    .nav-right{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .btn{
+      display:inline-block;
+      text-decoration:none;
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: .95rem;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--navy);
+      box-shadow: 0 6px 18px rgba(0,0,0,.06);
+    }
+    .btn.primary{
+      background: var(--teal);
+      border-color: rgba(42,169,161,.35);
+      color: #062422;
+    }
+
+    /* ====== Layout sections ====== */
+    .wrap{
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 34px 14px 70px;
+    }
+    .section{
+      margin: 44px 0;
+    }
+    .h2{
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.9rem;
+      margin: 0 0 10px;
+      color: var(--navy);
+    }
+    .sub{
+      margin: 0 0 18px;
+      color: var(--muted);
+      max-width: 75ch;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+    }
+    .card{
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .col-6{grid-column: span 6;}
+    .col-4{grid-column: span 4;}
+    .col-8{grid-column: span 8;}
+    .col-12{grid-column: span 12;}
+    @media (max-width: 860px){
+      .col-6,.col-4,.col-8{grid-column: span 12;}
+    }
+
+    .kicker{
+      font-size:.85rem;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color: var(--muted);
+      margin: 0 0 10px;
+    }
+    .title{
+      margin: 0 0 8px;
+      font-size: 1.15rem;
+      color: var(--navy);
+    }
+    .meta{
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size:.95rem;
+    }
+    ul.clean{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: #1f2a3a;
+    }
+    ul.clean li{margin: 8px 0}
+    .pillrow{
+      display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;
+    }
+    .pill{
+      background:#f1fbfa;
+      border:1px solid rgba(42,169,161,.25);
+      color:#134442;
+      padding: 7px 10px;
+      border-radius:999px;
+      font-weight:600;
+      font-size:.92rem;
+    }
+
+    .footer{
+      border-top: 1px solid var(--line);
+      padding-top: 26px;
+      color: var(--muted);
+      display:flex;
+      gap:12px;
+      justify-content: space-between;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .small a{color: var(--navy); text-decoration:none; font-weight:700}
+    .small a:hover{text-decoration:underline}
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <div>
+        <h1 class="name">Abdallah Madani</h1>
+        <p class="tagline">Honours Life Sciences (McMaster University) • Medicine + Geography • Global Health</p>
+        <p class="intro">
+          I’m a first-year Life Sciences student exploring health beyond biology: how environment, place, and society shape outcomes.
+          I’m interested in patient-centered care, global health, and the “why” behind differences in health across communities.
+        </p>
+        <div class="chips">
+          <span class="chip">Medicine</span>
+          <span class="chip">Global Health</span>
+          <span class="chip">Medical Geography</span>
+          <span class="chip">Health Systems</span>
+          <span class="chip">Ethics & Technology</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <p class="mini-title">Quick snapshot</p>
+        <ul class="mini-list">
+          <li><strong>Based:</strong> Ontario, Canada</li>
+          <li><strong>Focus:</strong> Life Sciences + health & place</li>
+          <li><strong>Goal:</strong> Medicine with a global perspective</li>
+        </ul>
+        <div style="height:14px"></div>
+        <p class="mini-title">Contact</p>
+        <ul class="mini-list">
+          <li>Email: <em>abdallah@email.com</em> (replace)</li>
+          <li>LinkedIn: <em>add your link</em></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div style="display:flex; gap:6px; flex-wrap:wrap;">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#interests">Interests</a>
+        <a href="#projects">Projects</a>
+        <a href="#goals">Goals</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav-right">
+        <a class="btn" href="#top">Top</a>
+        <a class="btn primary" href="#contact">Reach out</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <h2 class="h2">About</h2>
+      <p class="sub">
+        I’m interested in medicine, but I’m also really interested in context: where people live, what resources exist,
+        and how systems shape health. That’s why I’m drawn to geography alongside biology — because health is never just “the body.”
+      </p>
+      <div class="grid">
+        <div class="card col-6">
+          <p class="kicker">What I’m building</p>
+          <h3 class="title">A strong foundation for medicine</h3>
+          <ul class="clean">
+            <li>Scientific reasoning and evidence-based thinking</li>
+            <li>Communication and professionalism in real settings</li>
+            <li>Long-term focus on serving diverse communities</li>
+          </ul>
+        </div>
+        <div class="card col-6">
+          <p class="kicker">Why medicine + geography</p>
+          <h3 class="title">Health changes by place</h3>
+          <ul class="clean">
+            <li>Access to care, transportation, income, and environment affect outcomes</li>
+            <li>Comparing health systems across countries is interesting and practical</li>
+            <li>Global health connects biology to policy, culture, and equity</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <h2 class="h2">Education</h2>
+      <p class="sub">A quick overview of my academic path and the themes I’m learning right now.</p>
+
+      <div class="grid">
+        <div class="card col-8">
+          <p class="kicker">University</p>
+          <h3 class="title">McMaster University — Honours Life Sciences</h3>
+          <p class="meta">Hamilton, Ontario • First year</p>
+          <div class="pillrow">
+            <span class="pill">Biology</span>
+            <span class="pill">Chemistry</span>
+            <span class="pill">Psychology</span>
+            <span class="pill">Scientific reasoning</span>
+            <span class="pill">Data interpretation</span>
+          </div>
+        </div>
+        <div class="card col-4">
+          <p class="kicker">Academic development</p>
+          <h3 class="title">Growth mindset</h3>
+          <p class="meta">University learning is different, and I’m focused on improving how I study and think.</p>
+          <ul class="clean">
+            <li>Better time management</li>
+            <li>Cleaner note systems</li>
+            <li>Stronger lab/report writing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <h2 class="h2">Experience</h2>
+      <p class="sub">
+        I’m building experience that develops communication, responsibility, and comfort working with people — the stuff that matters in healthcare.
+        Replace the placeholders with your real roles.
+      </p>
+
+      <div class="grid">
+        <div class="card col-6">
+          <p class="kicker">Clinical / community</p>
+          <h3 class="title">Clinical Assistant (placeholder)</h3>
+          <p class="meta">Oakville, Ontario • On-call / Part-time</p>
+          <ul class="clean">
+            <li>Support patient-facing tasks and clinic flow</li>
+            <li>Practice professionalism, accuracy, and confidentiality</li>
+            <li>Learn how real healthcare environments run day-to-day</li>
+          </ul>
+        </div>
+
+        <div class="card col-6">
+          <p class="kicker">Work / teamwork</p>
+          <h3 class="title">Bakery Associate (placeholder)</h3>
+          <p class="meta">Customer service • Fast-paced teamwork</p>
+          <ul class="clean">
+            <li>Communication with customers and coworkers</li>
+            <li>Staying organized under time pressure</li>
+            <li>Consistency and attention to detail</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERESTS -->
+    <section class="section" id="interests">
+      <h2 class="h2">Interests</h2>
+      <p class="sub">The themes I keep coming back to when I study, work, or write.</p>
+
+      <div class="grid">
+        <div class="card col-4">
+          <h3 class="title">Medicine</h3>
+          <p class="meta">Diagnosis thinking, patient care, and human stories behind symptoms.</p>
+        </div>
+        <div class="card col-4">
+          <h3 class="title">Geography & Society</h3>
+          <p class="meta">How place, environment, and community resources shape health.</p>
+        </div>
+        <div class="card col-4">
+          <h3 class="title">Global Health</h3>
+          <p class="meta">Comparing systems, accessibility, and equity across countries.</p>
+        </div>
+        <div class="card col-4">
+          <h3 class="title">Human Behavior</h3>
+          <p class="meta">Psychology, decision-making, and how people respond to stress and illness.</p>
+        </div>
+        <div class="card col-4">
+          <h3 class="title">Tech & Ethics</h3>
+          <p class="meta">AI in healthcare, fairness, bias, and limits of automation.</p>
+        </div>
+        <div class="card col-4">
+          <h3 class="title">Learning</h3>
+          <p class="meta">Turning curiosity into structured knowledge and real skill.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <h2 class="h2">Projects & Writing</h2>
+      <p class="sub">
+        This section is for 2–6 things: essays, reflections, posters, research notes, or anything you’re proud of.
+        Start small. Add more later.
+      </p>
+
+      <div class="grid">
+        <div class="card col-6">
+          <p class="kicker">Writing</p>
+          <h3 class="title">AI, ethics, and decision-making in medicine</h3>
+          <p class="meta">A reflection on whether AI can “understand” values or only compute patterns.</p>
+          <ul class="clean">
+            <li>Ethics & bias</li>
+            <li>Limits of automation</li>
+            <li>Why human context still matters</li>
+          </ul>
+        </div>
+
+        <div class="card col-6">
+          <p class="kicker">Idea</p>
+          <h3 class="title">Health changes by place (medical geography)</h3>
+          <p class="meta">A mini-project exploring how environment and access affect outcomes across regions.</p>
+          <ul class="clean">
+            <li>Access to clinics and transportation</li>
+            <li>Environmental exposure</li>
+            <li>Socioeconomic patterns</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- GOALS -->
+    <section class="section" id="goals">
+      <h2 class="h2">Future Goals</h2>
+      <p class="sub">
+        I’m working toward medicine with a global perspective — strong science foundation, strong communication, and real understanding of how systems and place affect people.
+      </p>
+      <div class="grid">
+        <div class="card col-12">
+          <ul class="clean">
+            <li>Build strong academic and lab fundamentals in Life Sciences</li>
+            <li>Keep growing experience in patient-facing environments</li>
+            <li>Learn more about healthcare systems and global health equity</li>
+            <li>Continue writing and documenting projects as a portfolio of thinking</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <h2 class="h2">Contact</h2>
+      <p class="sub">If you want to connect, feel free to reach out. Replace these with your real links.</p>
+
+      <div class="grid">
+        <div class="card col-6">
+          <h3 class="title">Email</h3>
+          <p class="meta"><strong>abdallah@email.com</strong></p>
+        </div>
+        <div class="card col-6">
+          <h3 class="title">LinkedIn</h3>
+          <p class="meta"><strong>linkedin.com/in/your-link</strong></p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="small">© <span id="year"></span> Abdallah Madani</div>
+        <div class="small">Built on GitHub Pages • <a href="#top">Back to top</a></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
