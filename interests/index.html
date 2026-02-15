@@ -1,1 +1,79 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interests · Abdallah Madani</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <div class="bg-dust"></div>
 
+  <div class="container">
+    <nav class="nav">
+      <div class="brand"><span class="dot"></span><span>Abdallah Madani</span></div>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/education/">Education</a>
+        <a href="/experience/">Experience</a>
+        <a href="/awards/">Awards</a>
+        <a href="/certifications/">Certifications</a>
+        <a href="/interests/">Interests</a>
+        <a href="/labs/">Lab Work</a>
+      </div>
+      <div class="controls">
+        <button class="iconbtn" data-theme-toggle title="Toggle theme">☾</button>
+        <a class="iconbtn" href="https://www.linkedin.com/in/abdallahmadani/" target="_blank" rel="noreferrer" title="LinkedIn">in</a>
+      </div>
+    </nav>
+
+    <section class="section">
+      <h2>Interests</h2>
+      <div class="card">
+        <p style="margin:0; color:var(--muted); line-height:1.75;">
+          I’m genuinely obsessed with world geography. I’ve memorized the flags of all 195 UN-recognized countries (plus extras),
+          I know a lot of anthems, and I’ve placed top 3 in a Geotastic pinpoint challenge against world-level players.
+          For me, geography isn’t trivia — it’s a way to understand people, systems, and how health looks different across the world.
+        </p>
+      </div>
+
+      <div class="globeWrap" id="globeWrap">
+        <div class="globeHUD">
+          <div class="hudChip">Click a country to zoom + open a fact card.</div>
+          <div class="hudChip">Visited countries are highlighted.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="yr"></span> Abdallah Madani</span>
+      <span><a href="mailto:abdallah-madani@hotmail.com" style="color:inherit;">abdallah-madani@hotmail.com</a> · <a href="tel:+13657792040" style="color:inherit;">+1 (365) 779-2040</a></span>
+    </footer>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="countryModal" role="dialog" aria-modal="true">
+    <div class="modalCard">
+      <div class="modalTop">
+        <div style="font-weight:650;" id="mTitle">Country</div>
+        <button class="closeX" id="mClose" aria-label="Close">✕</button>
+      </div>
+      <div class="modalBody">
+        <div class="flag" id="mFlag"></div>
+        <div class="kv" id="mKV"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+
+  <!-- Globe libs -->
+  <script src="https://unpkg.com/three/build/three.min.js"></script>
+  <script src="https://unpkg.com/topojson-client@3"></script>
+  <script src="https://unpkg.com/globe.gl"></script>
+
+  <script src="/assets/js/globe.js"></script>
+  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>
