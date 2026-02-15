@@ -3,76 +3,101 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Interests · Abdallah Madani</title>
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <title>Interests • Abdallah Madani</title>
+  <link rel="stylesheet" href="/assets/css/main.css" />
 </head>
 <body>
-  <div class="bg-dust"></div>
+  <div class="bg"></div><canvas id="particles"></canvas><div class="flags"></div>
 
-  <div class="container">
-    <nav class="nav">
-      <div class="brand"><span class="dot"></span><span>Abdallah Madani</span></div>
-      <div class="navlinks">
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/education/">Education</a>
-        <a href="/experience/">Experience</a>
-        <a href="/awards/">Awards</a>
-        <a href="/certifications/">Certifications</a>
-        <a href="/interests/">Interests</a>
-        <a href="/labs/">Lab Work</a>
-      </div>
-      <div class="controls">
-        <button class="iconbtn" data-theme-toggle title="Toggle theme">☾</button>
-        <a class="iconbtn" href="https://www.linkedin.com/in/abdallahmadani/" target="_blank" rel="noreferrer" title="LinkedIn">in</a>
-      </div>
-    </nav>
-
-    <section class="section">
-      <h2>Interests</h2>
-      <div class="card">
-        <p style="margin:0; color:var(--muted); line-height:1.75;">
-          I’m genuinely obsessed with world geography. I’ve memorized the flags of all 195 UN-recognized countries (plus extras),
-          I know a lot of anthems, and I’ve placed top 3 in a Geotastic pinpoint challenge against world-level players.
-          For me, geography isn’t trivia — it’s a way to understand people, systems, and how health looks different across the world.
-        </p>
-      </div>
-
-      <div class="globeWrap" id="globeWrap">
-        <div class="globeHUD">
-          <div class="hudChip">Click a country to zoom + open a fact card.</div>
-          <div class="hudChip">Visited countries are highlighted.</div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <span>© <span id="yr"></span> Abdallah Madani</span>
-      <span><a href="mailto:abdallah-madani@hotmail.com" style="color:inherit;">abdallah-madani@hotmail.com</a> · <a href="tel:+13657792040" style="color:inherit;">+1 (365) 779-2040</a></span>
-    </footer>
-  </div>
-
-  <!-- Modal -->
-  <div class="modal" id="countryModal" role="dialog" aria-modal="true">
-    <div class="modalCard">
-      <div class="modalTop">
-        <div style="font-weight:650;" id="mTitle">Country</div>
-        <button class="closeX" id="mClose" aria-label="Close">✕</button>
-      </div>
-      <div class="modalBody">
-        <div class="flag" id="mFlag"></div>
-        <div class="kv" id="mKV"></div>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/"><span class="brand-dot"></span><span>Abdallah Madani</span></a>
+      <nav class="nav-links">
+        <a href="/">Home</a><a href="/about/">About</a><a href="/education/">Education</a><a href="/experience/">Experience</a>
+        <a href="/awards/">Awards</a><a href="/certifications/">Certifications</a><a href="/interests/">Interests</a>
+        <a href="/labs/">Lab & Writing</a><a href="/contact/">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon" id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A8.4 8.4 0 1 1 11.2 3a6.8 6.8 0 0 0 9.8 9.8Z"/></svg>
+        </button>
       </div>
     </div>
-  </div>
+  </header>
+
+  <main class="container">
+    <div class="page-title">
+      <h2>Interests</h2>
+      <p>
+        Geography is my “I can’t shut up about it” thing. I’ve memorized flags from all 195 UN-recognized countries (plus extras),
+        and I’m the type to learn capitals for fun. I also placed top-3 in a Geotastic pinpoint challenge against elite players.
+      </p>
+    </div>
+
+    <div class="grid section">
+      <div class="card" style="grid-column: span 7;">
+        <h3>Interactive globe</h3>
+        <p>
+          This globe is transparent and clickable. Countries I’ve visited are highlighted.
+          Click any country to see its flag, capital, and quick facts.
+        </p>
+        <div class="globe-wrap">
+          <canvas id="globeCanvas"></canvas>
+        </div>
+      </div>
+
+      <div class="card" style="grid-column: span 5;">
+        <h3>Visited countries</h3>
+        <p>Highlighted on the globe:</p>
+        <div class="badges">
+          <span class="badge">Syria</span><span class="badge">Jordan</span><span class="badge">Lebanon</span>
+          <span class="badge">UAE</span><span class="badge">Saudi Arabia</span><span class="badge">Germany</span>
+          <span class="badge">Italy</span><span class="badge">France</span><span class="badge">Switzerland</span>
+          <span class="badge">Austria</span><span class="badge">Canada</span><span class="badge">USA</span>
+        </div>
+        <hr class="sep">
+        <h3>Creative + media</h3>
+        <p>
+          I’m into photography, Photoshop, and video editing — learned through school and built a lot on my own.
+          I like making clean visuals, especially when the topic is science or geography.
+        </p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>© <span id="yr"></span> Abdallah Madani</div>
+        <div class="small-links"><a href="/contact/">Contact</a></div>
+      </div>
+    </footer>
+  </main>
+
+  <dialog class="modal" id="countryModal">
+    <div class="modal-card">
+      <div class="modal-head">
+        <div style="display:flex; align-items:center; gap:12px">
+          <img class="flag" id="cFlag" alt="Flag" />
+          <div>
+            <div style="font-weight:700" id="cName">Country</div>
+            <div class="meta">Click outside to close</div>
+          </div>
+        </div>
+        <button class="icon-btn" id="closeModal" aria-label="Close">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="kv">
+          <div class="card-mini"><div class="meta">Capital</div><div style="font-weight:650" id="cCapital">—</div></div>
+          <div class="card-mini"><div class="meta">Region</div><div style="font-weight:650" id="cRegion">—</div></div>
+          <div class="card-mini"><div class="meta">Population</div><div style="font-weight:650" id="cPopulation">—</div></div>
+          <div class="card-mini"><div class="meta">Fun facts</div><div style="font-weight:650" id="cFun">—</div></div>
+        </div>
+      </div>
+    </div>
+  </dialog>
 
   <script src="/assets/js/main.js"></script>
-
-  <!-- Globe libs -->
-  <script src="https://unpkg.com/three/build/three.min.js"></script>
-  <script src="https://unpkg.com/topojson-client@3"></script>
-  <script src="https://unpkg.com/globe.gl"></script>
-
   <script src="/assets/js/globe.js"></script>
   <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
 </body>
